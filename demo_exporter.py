@@ -13,6 +13,7 @@ bl_info = {
 
 
 import bpy
+from pathlib import Path
 
 def main(context):
     for ob in context.scene.objects:

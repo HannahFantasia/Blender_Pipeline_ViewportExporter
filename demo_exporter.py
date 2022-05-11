@@ -30,8 +30,6 @@ class DemoExport(bpy.types.Operator):
         return context.active_object is not None
 
     def execute(self, context):
-        bpy.ops.file.filenum(increment=1)
-        bpy.ops.file.execute()
         path = bpy.path.abspath("//").split("\\")
         filenumber = bpy.data.filepath.split("\\")
         path[-3] = 'Demo'

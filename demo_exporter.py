@@ -41,6 +41,7 @@ class DemoExport(bpy.types.Operator):
         bpy.data.scenes["Scene"].render.filepath = str(renderpath)
         bpy.ops.view3d.view_camera()
         bpy.context.space_data.overlay.show_overlays = False
+        bpy.context.scene.render.image_settings.file_format = 'FFMPEG'
         bpy.context.scene.render.ffmpeg.format = "MPEG4"
         bpy.context.scene.render.ffmpeg.codec = "H264"
         bpy.context.scene.render.ffmpeg.use_max_b_frames = False

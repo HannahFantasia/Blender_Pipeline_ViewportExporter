@@ -32,7 +32,7 @@ class DemoExport(bpy.types.Operator):
     def execute(self, context):
         path = bpy.path.abspath("//").split("\\")
         filenumber = bpy.data.filepath.split("\\")
-        path[-3] = 'Demo'
+        path[-2] = 'Demo'
         path[-1] = filenumber[-1]
         demopath = '\\'.join(path)
         filename = Path(demopath)

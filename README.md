@@ -9,14 +9,14 @@ Click F3, type in Master and click on Demo Exporter.
 Necessary folder structure:
 
 >Task
->>Source
->>>001_asset
->>>>asset_001.blend
+>>001.00_asset
+>>>Source
+>>>>001.00_asset_001.blend
 
->>Master (optional but I prefer to have one)
->>>001_asset
->>>>001_asset_master.blend
+>>001.00_asset
+>>>Master
+>>>>001.00_asset_Master.blend
 
->>Demo
->>>001_asset
->>>>001_asset_001.mp4 (the file being created)
+>>001.00_asset
+>>>Demo
+>>>>001.00_asset_001.mp4

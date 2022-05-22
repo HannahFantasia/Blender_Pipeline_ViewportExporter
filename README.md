@@ -11,14 +11,14 @@ Necessary folder structure:
 `Task/tyPe/Shotnumber/Content`
 
 >Task
->>001.00_asset
->>>Source
+>>Source
+>>>001.00_asset
 >>>>001.00_asset_001.blend
 
->>001.00_asset
->>>Master
+>>Master
+>>>001.00_asset
 >>>>001.00_asset_Master.blend (created file)
 
->>001.00_asset
->>>Demo
+>>Demo
+>>>001.00_asset
 >>>>001.00_asset_001.mp4 (created file)

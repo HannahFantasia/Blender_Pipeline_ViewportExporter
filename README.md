@@ -8,6 +8,8 @@ Click F3, type in Master or Demo and click on Demo Exporter or Master Exporter.
 
 Necessary folder structure:
 
+`Task/tyPe/Shotnumber/Content`
+
 >Task
 >>001.00_asset
 >>>Source

@@ -39,7 +39,16 @@ class DemoExport(bpy.types.Operator):
         renderpath = filename.with_suffix('.mp4')
         scene = bpy.context.scene
         bpy.data.scenes["Scene"].render.filepath = str(renderpath)
-        bpy.ops.view3d.view_camera()
+
+        camera_toggled = []
+        for c in bpy.context.screen.areas:
+            if c.type == 'VIEW_3D':
+                camera_toggled = a.spaces[0].region_3d.view_perspective == "CAMERA"
+        if camera_toggled = True:
+            pass
+        else:
+            bpy.ops.view3d.view_camera()
+
         bpy.context.space_data.overlay.show_overlays = False
         bpy.context.scene.render.image_settings.file_format = 'FFMPEG'
         bpy.context.scene.render.ffmpeg.format = "MPEG4"
@@ -58,7 +67,7 @@ class DemoExport(bpy.types.Operator):
         bpy.context.scene.render.ffmpeg.audio_bitrate = 192
         bpy.context.scene.render.ffmpeg.audio_mixrate = 48000
         bpy.ops.render.opengl(animation=True)
-        bpy.context.space_data.overlay.show_overlays = True
+        bpy.context.space_data.overlay.show_overlays = False
         return {'FINISHED'}
 
 

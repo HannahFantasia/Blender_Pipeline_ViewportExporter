@@ -45,7 +45,7 @@ class DemoExport(bpy.types.Operator):
         for c in bpy.context.screen.areas:
             if c.type == 'VIEW_3D':
                 camera_toggled = a.spaces[0].region_3d.view_perspective == "CAMERA"
-        if camera_toggled = True:
+        if camera_toggled == True:
             pass
         else:
             bpy.ops.view3d.view_camera()

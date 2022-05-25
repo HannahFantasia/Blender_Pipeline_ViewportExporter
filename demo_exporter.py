@@ -30,7 +30,7 @@ class DemoExport(bpy.types.Operator):
         return context.active_object is not None
 
     def execute(self, context):
-        
+
         path = bpy.path.abspath("//").split("\\")
         filenumber = bpy.data.filepath.split("\\")
         path[-3] = 'Demo'
@@ -49,7 +49,6 @@ class DemoExport(bpy.types.Operator):
             pass
         else:
             bpy.ops.view3d.view_camera()
-
 
         bpy.context.space_data.overlay.show_overlays = False
         bpy.context.scene.render.image_settings.file_format = 'FFMPEG'

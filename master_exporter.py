@@ -30,8 +30,8 @@ class MasterExport(bpy.types.Operator):
 
     def execute(self, context):
         path = bpy.path.abspath("//").split("\\")
-        path[-2] = 'Master'
-        path[-1] = f'{path[-2]}_Master.blend'
+        path[-1] = 'Master'
+        path[-1] = f'{path[-3]}_Master.blend'
         master = '\\'.join(path)
         bpy.ops.wm.save_as_mainfile(filepath =str(master), check_existing = True, copy = True)
         return {'FINISHED'}
